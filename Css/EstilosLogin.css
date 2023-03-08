@@ -9,6 +9,7 @@ body{
 header{
     display: flex;
     border-bottom: 3px solid #000000 ;
+    background-color: #D39A0F;
 }
 header h1{
     
