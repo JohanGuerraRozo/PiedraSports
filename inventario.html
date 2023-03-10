@@ -1,58 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Css/inventario.css">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="Css/bootstrap.min.css" />
+    <!--CSS Propio-->
+    <link rel="stylesheet" href="Css/inventario.css" />
     <title>Inventario</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="cabecera">
-        <img src="Img/logo.png" alt="Logo">
-        <h1>Inventario</h1>
+      <img src="Img/logo.png" alt="Logo" />
+      <h1>Inventario</h1>
     </header>
     <div class="menu">
-        <nav>
-            <ul>
-                <li>
-                    <a href="#">
-                        <span>Ventas</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span>Inventario</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span>Compras</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span>Distribución</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span>Usuarios</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">
+              <span>Ventas</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Inventario</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Compras</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Distribución</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Usuarios</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
     <div class="contenido-principal">
-        <form action="submit" class="fromularioUno">
-            <label for="idInventario">Id         Inventario</label><input type="text " name="id" id="idInventario"><br>
-            <label for="idInventario">Fecha      Inventario</label><input type="text " name="id" id="idInventario"><br>
-            <label for="idInventario">Movimiento Inventario</label><input type="text " name="id" id="idInventario"><br>
-            <label for="idInventario">Cantidad   Inventario</label><input type="text " name="id" id="idInventario"> 
-        </form>
+      <form action="submit" class="fromularioUno">
+        <div class="mb-3">
+          <label for="idInventario" class="form-label"
+            >Identificacion del Inventario</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="idInventario"
+            placeholder="Identificacion del Inventario"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="fechaInventario" class="form-label"
+            >Fecha De Movimiento</label
+          >
+          <input type="date" class="form-control" id="fechaInventario" />
+        </div>
+        <div class="mb-3">
+          <label for="movimientoInvetario" class="form-label"
+            >Movimiento Realizado</label
+          >
+          <textarea
+            class="form-control"
+            id="movimientoInvetario"
+            rows="3"
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="cantidadInventario" class="form-label">Cantidad</label>
+          <input
+            type="number"
+            class="form-control"
+            id="cantidadInventario"
+            placeholder="Cantidad"
+          />
+        </div>
+      </form>
     </div>
-</body>
-
+  </body>
 </html>
