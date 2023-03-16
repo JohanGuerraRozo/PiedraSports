@@ -78,14 +78,7 @@ body {
   height: 90px;
   width: 500px;
 }
-.pieDePagina {
-  background-color: #143d59;
-  color: #ffffff;
-  text-align: right;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
+
 h2 {
   color: #000000;
   margin-left: 15px;
@@ -116,12 +109,12 @@ p {
 .arrow {
   position: absolute;
   top: 60px;
-  padding: 0;
+  padding: 5px;
   border-radius: 15px;
   border: none;
   font-size: 24px;
   line-height: 24px;
-  color: #444;
+  color: #000000;
   display: block;
 }
 
@@ -135,10 +128,12 @@ p {
 }
 
 .prev {
+  top: 85px;
   left: 7px;
 }
 
 .next {
+  top: 85px;
   right: 7px;
 }
 
@@ -162,4 +157,12 @@ p {
 
 .gallery li {
   display: inline-block;
+}
+.pieDePagina {
+  background-color: #143d59;
+  color: #ffffff;
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }

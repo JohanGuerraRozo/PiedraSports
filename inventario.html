@@ -48,43 +48,37 @@
       </nav>
     </div>
     <div class="contenido-principal">
-      <form action="submit" class="fromularioUno">
-        <div class="mb-3">
-          <label for="idInventario" class="form-label"
-            >Identificacion del Inventario</label
+      <form action="get">
+        <div class="mb-3 mt-3">
+          <label for="id-inventory" class="form-label"
+            >Número del inventario</label
           >
           <input
             type="number"
             class="form-control"
-            id="idInventario"
-            placeholder="Identificacion del Inventario"
+            id="id-inventory"
+            placeholder="001"
+            disabled
           />
         </div>
+        <label for="Movimiento">Movimiento realizado</label>
+        <textarea
+          class="form-control"
+          rows="4"
+          id="Movimiento"
+          name="text"
+        ></textarea>
         <div class="mb-3">
-          <label for="fechaInventario" class="form-label"
-            >Fecha De Movimiento</label
-          >
-          <input type="date" class="form-control" id="fechaInventario" />
-        </div>
-        <div class="mb-3">
-          <label for="movimientoInvetario" class="form-label"
-            >Movimiento Realizado</label
-          >
-          <textarea
-            class="form-control"
-            id="movimientoInvetario"
-            rows="3"
-          ></textarea>
-        </div>
-        <div class="mb-3">
-          <label for="cantidadInventario" class="form-label">Cantidad</label>
+          <label for="pwd" class="form-label">Password:</label>
           <input
-            type="number"
+            type=""
             class="form-control"
-            id="cantidadInventario"
-            placeholder="Cantidad"
+            id="pwd"
+            placeholder="Enter password"
+            name="pswd"
           />
         </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
   </body>
