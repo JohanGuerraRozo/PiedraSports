@@ -78,3 +78,6 @@ body {
     margin-top: -70px;
   }
 }
+.contenido-principal form{
+  border: 1px,solid,#000000;
+}
