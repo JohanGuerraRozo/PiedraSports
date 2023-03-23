@@ -17,34 +17,36 @@
       <h1>Inventario</h1>
     </header>
     <div class="menu">
-      <nav>
-        <ul>
-          <li>
-            <a href="#">
-              <span>Ventas</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>Inventario</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>Compras</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>Distribución</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>Usuarios</span>
-            </a>
-          </li>
-        </ul>
+      <nav class="menu-desplegable">
+        <button class="boton-menu">Ventas</button>
+        <div class="Contenido-menu">
+          <a href="#">Pedido</a>
+          <a href="#">Catalogo</a>
+          <a href="#">Factura</a>
+        </div>
+      </nav>
+      <nav class="menu-desplegable">
+        <button class="boton-menu">Compras</button>
+        <div class="Contenido-menu">
+          <a href="#">Proveedor</a>
+          <a href="#">Solicitud Compra</a>
+          <a href="#">Pago proveedor</a>
+        </div>
+      </nav>
+      <nav class="menu-desplegable">
+        <button class="boton-menu">Distribución</button>
+        <div class="Contenido-menu">
+          <a href="#">Domicilio</a>
+          <a href="#">Valoracion</a>
+          <a href="#">Seguimiento</a>
+        </div>
+      </nav>
+      <nav class="menu-desplegable">
+        <button class="boton-menu">Inventario</button>
+        <div class="Contenido-menu">
+          <a href="#">Entradas</a>
+          <a href="#">Salidas</a>
+        </div>
       </nav>
     </div>
     <div class="contenido-principal">
@@ -61,21 +63,15 @@
             disabled
           />
         </div>
-        <label for="Movimiento">Movimiento realizado</label>
-        <textarea
-          class="form-control"
-          rows="4"
-          id="Movimiento"
-          name="text"
-        ></textarea>
         <div class="mb-3">
-          <label for="pwd" class="form-label">Password:</label>
+          <label for="id-inventory" class="form-label"
+            >Número del inventario</label
+          >
           <input
-            type=""
+            type="text"
             class="form-control"
-            id="pwd"
-            placeholder="Enter password"
-            name="pswd"
+            id="id-inventory"
+            placeholder="Movimiento a realizar"
           />
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
