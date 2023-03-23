@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Css/dashboard.css" />
-    <title>Dashboard</title>
+    <!--Boostrap-->
+    <link rel="stylesheet" href="Css/bootstrap.min.css" />
+    <title>Ventas</title>
   </head>
   <body>
     <header class="cabecera">
       <img src="Img/logo.png" alt="Logo" />
-      <h1>Admin_123</h1>
+      <h1>Distribucion</h1>
     </header>
     <div class="menu">
       <nav class="menu-desplegable">
@@ -47,6 +49,36 @@
         </div>
       </nav>
     </div>
-    <div class="contenido-principal"></div>
+    <div class="contenido-principal">
+      <form action="get">
+        <div class="mb-3 mt-3">
+          <label for="id-distribucion" class="form-label">Número de distribucion</label>
+          <input
+            type="number"
+            class="form-control"
+            id="id-venta"
+            placeholder="001"
+            disabled
+          />
+        </div>
+        <div class="mb-3">
+          <label for="fecha-inicio-distribucion" class="form-label">Fecha inicio distribucion</label>
+          <input
+            type="date"
+            class="form-control"
+            id="fecha-inicio-distribucion"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="fecha-venta" class="form-label">Fecha final distribucion</label>
+          <input
+            type="date"
+            class="form-control"
+            id="fecha-venta"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Registrar Distribucion</button>
+      </form>
+    </div>
   </body>
 </html>
