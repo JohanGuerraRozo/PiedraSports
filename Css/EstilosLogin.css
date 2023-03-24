@@ -17,9 +17,9 @@ header h1 {
   margin-left: 39%;
 }
 header img {
-  width: 90px;
-  height: 90px;
-  margin-bottom: 15px;
+  margin-top: 15px;
+  width: 60px;
+  height: 60px;
 }
 .loginChiquito {
   color: #ffffff;
@@ -94,7 +94,7 @@ form .inputBonito {
 .contra:hover {
   text-decoration: underline;
 }
-input[type="submit"] {
+input[type="button"] {
     margin-top: 40px;
   margin-left: 75px;
   width: 50%;
@@ -106,7 +106,7 @@ input[type="submit"] {
   outline: none;
   transition: 0.5s;
 }
-input[type="submit"]:hover {
+input[type="button"]:hover {
   border: 1px solid #f4b41a;
   outline: none;
   background-color:#f4b41a ;

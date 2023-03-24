@@ -18,8 +18,9 @@ body {
 }
 
 .cabecera img {
-  height: 80px;
-  width: 80px;
+  margin-top: 5px;
+  height: 70px;
+  width: 70px;
 }
 
 .cabecera h1 {
