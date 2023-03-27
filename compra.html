@@ -66,9 +66,11 @@
         <div class="mb-3">
           <label for="precio-compra" class="form-label">Precio</label>
           <input
+            type="number"
             class="form-control"
             id="precio-compra"
             placeholder="Precio compra"
+            required
           />
         </div>
         <div class="mb-3">
@@ -78,6 +80,7 @@
             class="form-control"
             id="fecha-venta"
             placeholder="Precio compra"
+            required
           />
         </div>
         <div class="mb-3">
@@ -85,6 +88,7 @@
             >Forma de pago</label
           >
           <select id="forma-pago" class="form-select">
+            <option disabled>Selecciones un medio de pago</option>
             <option>Efectivo</option>
             <option>Tarjeta</option>
             <option>Nequi</option>

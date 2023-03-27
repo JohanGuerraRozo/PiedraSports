@@ -95,7 +95,8 @@ form .inputBonito {
   text-decoration: underline;
 }
 input[type="button"] {
-    margin-top: 40px;
+
+  margin-top: 40px;
   margin-left: 75px;
   width: 50%;
   height: 50px;
