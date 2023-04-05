@@ -79,7 +79,7 @@ form .inputBonito {
 }
 .inputBonito input:focus,
 .inputBonito input:valid {
-    color: #ffffff;
+  color: #ffffff;
 }
 .inputBonito input:focus ~ span::before,
 .inputBonito input:valid ~ span::before {
@@ -95,7 +95,6 @@ form .inputBonito {
   text-decoration: underline;
 }
 input[type="button"] {
-
   margin-top: 40px;
   margin-left: 75px;
   width: 50%;
@@ -110,10 +109,10 @@ input[type="button"] {
 input[type="button"]:hover {
   border: 1px solid #f4b41a;
   outline: none;
-  background-color:#f4b41a ;
+  background-color: #f4b41a;
 }
 .registrate {
-    margin-top: 30px;
+  margin-top: 30px;
   text-align: center;
   font-size: 16px;
   color: #ffffff;

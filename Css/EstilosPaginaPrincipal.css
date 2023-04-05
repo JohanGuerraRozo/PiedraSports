@@ -32,7 +32,7 @@ body {
   height: 50px;
 }
 .encabezado .logo {
-  margin-top:5px ;
+  margin-top: 5px;
   width: 60px;
   height: 60px;
 }
@@ -49,8 +49,6 @@ body {
   justify-content: center;
 }
 .menu {
-  border: 3px;
-  border-color: #000000;
   margin-top: 15px;
   margin-bottom: 30px;
 }
@@ -81,7 +79,6 @@ body {
   width: 500px;
 }
 
-
 p {
   font-style: normal;
 }
@@ -96,7 +93,7 @@ p {
   border: none;
   border-radius: 15px;
   background: #eee;
-  margin-bottom:15px ;
+  margin-bottom: 15px;
 }
 
 .carousel img {
@@ -144,7 +141,7 @@ p {
 
 .gallery ul {
   height: 200px;
-  width:9999px;
+  width: 9999px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -163,6 +160,6 @@ p {
   bottom: 0;
   width: 100%;
 }
-.title{
+.title {
   margin-left: 250px;
 }
