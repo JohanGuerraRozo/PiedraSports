@@ -23,7 +23,6 @@ body {
   outline: none;
   font-size: large;
   padding-left: 15px;
-  margin-left: 408px;
 }
 .encabezado img {
   margin-top: 10px;
@@ -112,6 +111,7 @@ p {
   line-height: 24px;
   color: #000000;
   display: block;
+  background-color: transparent;
 }
 
 .arrow:focus {
