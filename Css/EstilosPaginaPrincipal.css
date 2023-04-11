@@ -23,7 +23,6 @@ body {
   outline: none;
   font-size: large;
   padding-left: 15px;
-  margin-left: 408px;
 }
 .encabezado img {
   margin-top: 10px;
@@ -32,7 +31,7 @@ body {
   height: 50px;
 }
 .encabezado .logo {
-  margin-top:5px ;
+  margin-top: 5px;
   width: 60px;
   height: 60px;
 }
@@ -81,7 +80,6 @@ body {
   width: 500px;
 }
 
-
 p {
   font-style: normal;
 }
@@ -96,7 +94,7 @@ p {
   border: none;
   border-radius: 15px;
   background: #eee;
-  margin-bottom:15px ;
+  margin-bottom: 15px;
 }
 
 .carousel img {
@@ -115,6 +113,7 @@ p {
   line-height: 24px;
   color: #000000;
   display: block;
+  background-color: transparent;
 }
 
 .arrow:focus {
@@ -144,7 +143,7 @@ p {
 
 .gallery ul {
   height: 200px;
-  width:9999px;
+  width: 9999px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -163,6 +162,6 @@ p {
   bottom: 0;
   width: 100%;
 }
-.title{
+.title {
   margin-left: 250px;
 }
