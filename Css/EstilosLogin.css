@@ -94,7 +94,7 @@ form .inputBonito {
   text-decoration: underline;
 }
 button[type="submit"] {
-  margin-top: 40px;
+  margin-top: 2B0px;
   margin-left: 75px;
   width: 50%;
   height: 50px;
@@ -115,7 +115,7 @@ button[type="submit"] a {
   color: black;
 }
 .registrate {
-  margin-top: 30px;
+  margin-top: 20px;
   text-align: center;
   font-size: 16px;
   color: #ffffff;
@@ -129,6 +129,7 @@ button[type="submit"] a {
 }
 .error {
   margin-top: 5px;
+  margin-bottom: 5px;
   font-size: large;
   color: red;
   display: block;
