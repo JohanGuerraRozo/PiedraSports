@@ -1,99 +1,96 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.cabecera {
+  position: absolute;
+  height: 80px;
+  width: 100%;
+  background-color: #143d59;
+  z-index: 4;
+}
+
+.cabecera img {
+  margin-top: 5px;
+  height: 70px;
+  width: 70px;
+}
+
+.cabecera h1 {
+  color: #f4b41a;
+  text-align: center;
+  margin-top: -70px;
+}
+
+.menu {
+  position: absolute;
+  width: 100%;
+  background-color: #041f32;
+  height: 100vh;
+  z-index: 3;
+  padding-top: 80px;
+}
+.menu-desplegable .boton-menu {
+  background-color: #041f32;
+  color: #f4b41a;
+  font-size: 25px;
+  border-style: none;
+  padding: 20px 5px;
+  width: 100%;
+}
+.menu-desplegable .boton-menu:hover {
+  background-color: #02101a;
+  transition: 0.5s;
+}
+.menu-desplegable .Contenido-menu {
+  display: none;
+
+  width: 100%;
+  overflow: auto;
+}
+.menu-desplegable:hover .Contenido-menu {
+  display: block;
+  background-color: #02101a;
+  transition: 0.5s;
+}
+.menu-desplegable .Contenido-menu a {
+  text-align: center;
+  display: block;
+  color: #f4b41a;
+  padding: 5px;
+  text-decoration: none;
+}
+.menu-desplegable .Contenido-menu a:hover {
+  background-color: #0e2b41;
+  transition: 0.5s;
+}
+.contenido-principal {
+  padding-top: 100px;
+  padding-left: 300px;
+  padding-right: 50px;
+}
+
+@media screen and (min-width: 600px) {
+  .menu {
+    width: 250px;
   }
-  
-  * {
-    box-sizing: border-box;
+
+  .menu ul li {
+    text-align: left;
+    padding-left: 20px;
   }
-  
-  .cabecera {
-    position: absolute;
-    height: 80px;
-    width: 100%;
-    background-color: #143d59;
-    z-index: 4;
-  }
-  
-  .cabecera img {
-    margin-top: 5px;
-    height: 70px;
-    width: 70px;
-  }
-  
+
   .cabecera h1 {
-    color: #f4b41a;
-    text-align: center;
     margin-top: -70px;
   }
-  
-  .menu {
-    position: absolute;
-    width: 100%;
-    background-color: #041f32;
-    height: 100vh;
-    z-index: 3;
-    padding-top: 80px;
-  }
-  .menu-desplegable .boton-menu{
-      background-color: #041f32;
-      color: #f4b41a;
-      font-size: 25px;
-      border-style:none ;
-      padding:20px 5px  ;
-      width: 100%;
-  }
-  .menu-desplegable .boton-menu:hover{
-      background-color: #02101a;
-      transition: .5s;
-  }
-  .menu-desplegable .Contenido-menu {
-      display: none;
-  
-      width: 100%;
-      overflow: auto;
-  
-  }
-  .menu-desplegable:hover .Contenido-menu{
-      display: block;
-      background-color: #02101a;
-      transition: .5s;
-  }
-  .menu-desplegable .Contenido-menu a{
-      text-align: center;
-      display: block;
-      color: #f4b41a;
-      padding: 5px;
-      text-decoration: none;
-  
-  }
-  .menu-desplegable .Contenido-menu a:hover{
-      background-color: #0e2b41;
-      transition: .5s;
-  }
-  .contenido-principal {
-    padding-top: 100px;
-    padding-left: 300px;
-    padding-right: 50px;
-  }
-  
-  @media screen and (min-width: 600px) {
-    .menu {
-      width: 250px;
-    }
-  
-    .menu ul li {
-      text-align: left;
-      padding-left: 20px;
-    }
-  
-    .cabecera h1 {
-      margin-top: -70px;
-    }
-  }
-  .contenido-principal form {
-    border: 1px, solid, #000000;
-  }
-  
+}
+.contenido-principal form {
+  border: 1px, solid, #000000;
+}
