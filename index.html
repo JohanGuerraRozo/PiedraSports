@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    </*Pene*/>
-
-    <link rel="stylesheet" href="Css/EstilosPaginaPrincipal.css" />
+    <link rel="stylesheet" href="Css/estilos-index.css" />
     <title>Inicio</title>
   </head>
 
@@ -25,9 +23,9 @@
     </header>
     <div class="contenedor-menu">
       <nav class="menu">
-        <a href="">Deportes</a>
-        <a href="">Hombre</a>
-        <a href="">Mujer</a>
+        <a href="index.html">Deportes</a>
+        <a href="catalogo-hombre.html">Hombre</a>
+        <a href="catalogo-mujer.html">Mujer</a>
         <a href="">Accesorios</a>
       </nav>
     </div>
@@ -75,46 +73,12 @@
               </div>
               <button class="arrow next">→</button>
             </div>
-            <script>
-              /* etiqueta las imágenes pra poder rastrearlas, solo por conveniencia */
-              let i = 1;
-              for(let li of carousel.querySelectorAll('li')) {
-                li.style.position = 'relative';
-                li.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${i}</span>`);
-                i++;
-              }
-          
-              /* configuración */
-              let width = 300; // ancho de las imágenes
-              let count = 2; // conteo de las imágenes visibles
-          
-              let list = carousel.querySelector('ul');
-              let listElems = carousel.querySelectorAll('li');
-          
-              let position = 0; // posición del desplazamiento del carrete
-          
-              carousel.querySelector('.prev').onclick = function() {
-                // desplazamiento izquierdo
-                position += width * count;
-                // no podemos mover demasiado a la izquierda, se acaban las imágenes
-                position = Math.min(position, 0)
-                list.style.marginLeft = position + 'px';
-              };
-          
-              carousel.querySelector('.next').onclick = function() {
-                // desplazamiento derecho
-                position -= width * count;
-                // solo se puede desplazar el carrete de imágenes (longitud total de la cinta - conteo visibles)
-                position = Math.max(position, -width * (listElems.length - count));
-                list.style.marginLeft = position + 'px';
-              };
-            </script>
-
     <footer class="pieDePagina">
       <address>
         <p>Contactanos: PiedrasSports@piedra.com</p>
         <p>Contactanos: 3107511975</p>
       </address>
     </footer>
+    <script src="Js/catalogo.js"></script>
   </body>
 </html>
