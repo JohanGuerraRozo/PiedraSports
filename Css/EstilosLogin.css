@@ -41,7 +41,6 @@ header img {
 }
 form .inputBonito {
   position: relative;
-  border-bottom: 2px solid #ffffff;
   margin: 30px 0;
 }
 .inputBonito input {
@@ -94,7 +93,7 @@ form .inputBonito {
 .contra:hover {
   text-decoration: underline;
 }
-input[type="button"] {
+button[type="submit"] {
   margin-top: 40px;
   margin-left: 75px;
   width: 50%;
@@ -106,10 +105,14 @@ input[type="button"] {
   outline: none;
   transition: 0.5s;
 }
-input[type="button"]:hover {
+button[type="submit"]:hover {
   border: 1px solid #f4b41a;
   outline: none;
   background-color: #f4b41a;
+}
+button[type="submit"] a {
+  text-decoration: none;
+  color: black;
 }
 .registrate {
   margin-top: 30px;
@@ -123,4 +126,10 @@ input[type="button"]:hover {
 }
 .registrate a:hover {
   text-decoration: underline;
+}
+.error {
+  margin-top: 5px;
+  font-size: large;
+  color: red;
+  display: block;
 }

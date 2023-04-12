@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Css/EstilosLogin.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Css/EstilosLogin.css" />
     <title>Inicion de Sesión</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="contenedor">
-        <header>
-            <a href="index.html"><img src="Img/logo.png" alt="Logo" /></a>
-            <h1>Inicio de Sesion</h1>
-        </header>
-            <div class="loginChiquito">
-                <h2>Inicio de Sesion</h2>
-                <form method="get">
-                    <div class="inputBonito">
-                        <input type="text" required>
-                        <span></span>
-                        <label for="">Usuario</label>
-                    </div>
-                    <div class="inputBonito">
-                        <input type="password" required>
-                        <span></span>
-                        <label for="">Contraseña</label>
-                    </div>
-                    <div class="contra">Olvidaste tu Contraseña??</div>
-                    <a href="index.html"><input type="button" value="Inrgesar"></a>
-                    <div class="registrate">
-                        Quieres ser parte de las piedras? <a href="#">Registrate</a>
-                    </div>
-                </form>
-            </div>
+      <header>
+        <a href="index.html"><img src="Img/logo.png" alt="Logo" /></a>
+        <h1>Inicio de Sesion</h1>
+      </header>
+      <div class="loginChiquito">
+        <h2>Inicio de Sesion</h2>
+        <form>
+          <div class="inputBonito">
+            <input type="text" name="usuario" />
+            <span></span>
+            <label for="">Usuario</label>
+          </div>
+          <div class="inputBonito">
+            <input type="password" name="contraseña" />
+            <span></span>
+            <label for="">Contraseña</label>
+          </div>
+          <div class="contra">Olvidaste tu Contraseña??</div>
+          <button type="submit" id="enviar">
+            <a href="index.html">Ingresar</a>
+          </button>
+          <div class="registrate">
+            Quieres ser parte de las piedras? <a href="#">Registrate</a>
+          </div>
+        </form>
+      </div>
     </div>
-</body>
+    <script src="Js/inicio-sesion.js"></script>
+  </body>
 </html>
