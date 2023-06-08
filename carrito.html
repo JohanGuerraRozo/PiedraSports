@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="stylesheet" href="Css/carrito.css" />
+    <title>Inicio</title>
+  </head>
+
+  <body>
+    <header class="encabezado">
+      <img src="Img/logo.png" alt="Logo" class="logo" />
+      <input
+        type="text"
+        name="barra de busqueda"
+        class="busqueda"
+        placeholder="Realiza tu busqueda"
+      />
+      <p>Nosotros</p>
+      <img src="Img/carrito-de-compras.png" alt="carrito" class="imgCabecera" />
+      <a href="inicio-Sesion.html"><img src="Img/usuario.png" alt="usuario" class="imgCabecera" /></a>
+    </header>
+    <div class="contenedor-menu">
+      <nav class="menu">
+        <a href="">Deportes</a>
+        <a href="">Hombre</a>
+        <a href="">Mujer</a>
+        <a href="">Accesorios</a>
+      </nav>
+    </div>
+    <h1 class="titulo">Producto agregado al carrito</h1>
+    <table class="tabla-carrito">
+      <tr>
+        <td>
+          <img src="img/balon.png" class="prod_car" />
+        </td>
+        <td>
+            <div class="cont_1">
+                <p class="nom_prod_car">Balon de futbol-Champions League- <br> Golary</p>
+                <p class="val_prod_car">$######</p>
+                <p class="cant_prod">Cantidad: #</p>
+            </div>
+        </td>
+        <td>
+            <img src="img/opi-portocarrero-kLeC-U110431176796zMD-1248x770@El Correo.jpg" class="divicion" />
+        </td>
+        <td>
+            <div class="cont_2">
+                <h1 class="titulo_2">Agregado al carrito</h1>
+                <p># articulo <br> Subtotal $###</p>
+                <input class="btn_prod" type="button" value="Productos en el carrito">
+            </div>
+            <input class="btn_continuar" type="button" value="Continuar comprando">
+        </td>
+      </tr>
+    </table>
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <h1 class="title">Articulos relacionados</h1>
+            <div id="carousel" class="carousel">
+              <button class="arrow prev">←</button>
+              <div class="gallery">
+                <ul>
+                  <li><img src="Img/balon.png"></li>
+                  <li><img src="Img/balon.png"></li>
+                  <li><img src="Img/balon.png"></li>
+                  <li><img src="Img/balon.png"></li>
+                  <li><img src="Img/balon.png"></li>
+                  <li><img src="Img/balon.png"></li>
+                  <li><img src="Img/balon.png"></li>
+                  <li><img src="Img/balon.png"></li>
+                  <li><img src="Img/balon.png"></li>
+                  <li><img src="Img/balon.png"></li>
+                  <li><img src="Img/balon.png"></li>
+                  <li><img src="Img/balon.png"></li>
+                  <li><img src="Img/balon.png"></li>
+                  <li><img src="Img/balon.png"></li>
+                  <li><img src="Img/balon.png"></li>
+                  <li><img src="Img/balon.png"></li>
+                  <li><img src="Img/balon.png"></li>
+                  <li><img src="Img/balon.png"></li>
+                </ul>
+              </div>
+              <button class="arrow next">→</button>
+            </div>
+            <script>
+              /* etiqueta las imágenes pra poder rastrearlas, solo por conveniencia */
+              let i = 1;
+              for(let li of carousel.querySelectorAll('li')) {
+                li.style.position = 'relative';
+                li.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${i}</span>`);
+                i++;
+              }
+          
+              /* configuración */
+              let width = 300; // ancho de las imágenes
+              let count = 2; // conteo de las imágenes visibles
+          
+              let list = carousel.querySelector('ul');
+              let listElems = carousel.querySelectorAll('li');
+          
+              let position = 0; // posición del desplazamiento del carrete
+          
+              carousel.querySelector('.prev').onclick = function() {
+                // desplazamiento izquierdo
+                position += width * count;
+                // no podemos mover demasiado a la izquierda, se acaban las imágenes
+                position = Math.min(position, 0)
+                list.style.marginLeft = position + 'px';
+              };
+          
+              carousel.querySelector('.next').onclick = function() {
+                // desplazamiento derecho
+                position -= width * count;
+                // solo se puede desplazar el carrete de imágenes (longitud total de la cinta - conteo visibles)
+                position = Math.max(position, -width * (listElems.length - count));
+                list.style.marginLeft = position + 'px';
+              };
+            </script>
+
+    <footer class="pieDePagina">
+      <address>
+        <p>Contactanos: PiedrasSports@piedra.com</p>
+        <p>Contactanos: 3107511975</p>
+      </address>
+    </footer>
+  </body>
+</html>
