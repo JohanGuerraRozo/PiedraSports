@@ -2,15 +2,15 @@
 class db
 {
     private $host = "localhost";
-    private $dbname = "piedrassportsdb";
-    private $user = "root";
+    private $dbname = "piedrasportsdb";
+    private $user = "rot";
     private $password = "";
-    private $puerto = "3307";
 
     public function conexion()
     {
         try {
-            $pdo = new PDO("mysql:host = $this->host;port=$this->puerto;dbname =$this->dbname", $this->user, $this->password);
+            $pdo = new PDO("mysql:host=$this->host;dbname=$this->dbname", $this->user, $this->password);
+            return $pdo;
         } catch (PDOException $e) {
             return $e->getMessage();
         }

@@ -1,2 +1,2 @@
 <?php
-header('Location: views/interfaces/html');
+header('Location: views/interfaces/index.html');
