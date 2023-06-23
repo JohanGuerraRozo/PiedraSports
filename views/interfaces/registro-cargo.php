@@ -67,8 +67,7 @@
                                     <div class="col-6">
                                         <div class="form-group text-start">
                                             <label for="nombre">Nombre</label>
-                                            <input type="text" class="form-control" name="nom-cargo" id="nombre"
-                                                required minlength="4" maxlength="20" />
+                                            <input type="text" class="form-control" name="nom-cargo" id="nombre" required minlength="4" maxlength="20" />
                                         </div>
                                     </div>
                                 </div>
