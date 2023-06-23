@@ -21,7 +21,7 @@ class cargoModel
     public function setCargo($nomCargo)
     {
         $stmt = $this->pdo->prepare("INSERT INTO cargo VALUES(null, :nomCargo)");
-        $stmt->bindParam(":nom_cargo", $nomCargo);
+        $stmt->bindParam(":nomCargo", $nomCargo);
         $stmt->execute();
     }
 
@@ -29,7 +29,7 @@ class cargoModel
     {
         $stmt = $this->pdo->prepare("UPDATE cargo SET nom_cargo = :nomCargo");
         $stmt->bindParam(":id", $id);
-        $stmt->bindParam(":nom_cargo", $nomCargo);
+        $stmt->bindParam(":nomCargo", $nomCargo);
         $stmt->execute();
     }
 
