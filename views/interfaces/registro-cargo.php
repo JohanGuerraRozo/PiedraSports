@@ -62,13 +62,12 @@
                             <h1 class="text-center">Registrar un cargo</h1>
                         </div>
                         <div class="card-body">
-                            <form action="" method="post">
+                            <form action="crear" method="post">
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="form-group text-start">
                                             <label for="nombre">Nombre</label>
-                                            <input type="text" class="form-control" name="nombre" id="nombre" required
-                                                minlength="4" maxlength="20" />
+                                            <input type="text" class="form-control" name="nom-cargo" id="nombre" required minlength="4" maxlength="20" />
                                         </div>
                                     </div>
                                 </div>
