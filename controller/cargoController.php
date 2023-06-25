@@ -27,16 +27,6 @@ class cargoController
             ';
         }
     }
-
-    public function deleteCargo($id)
-    {
-        $this->model->deleteCargo($id);
-        echo '
-            <script>alert("Cargo eliminado correctamente");
-            window.location = "../views/interfaces/registro-cargo.php";
-            </script>
-        ';
-    }
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -46,13 +36,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $cargoController->setCargo($nomCargo);
 
         exit;
-    }
-}
-
-if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-    $cargoController = new cargoController();
-    if (isset($_GET['action']) && $_GET['action'] == 'eliminar') {
-        $id = $_GET['id'];
-        $cargoController->deleteCargo($id);
     }
 }
