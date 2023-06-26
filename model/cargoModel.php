@@ -27,6 +27,7 @@ class cargoModel
 
     public function updateCargo($id, $nomCargo)
     {
+
         $stmt = $this->pdo->prepare("UPDATE cargo SET nom_cargo = :nomCargo");
         $stmt->bindParam(":id", $id);
         $stmt->bindParam(":nomCargo", $nomCargo);
@@ -35,7 +36,7 @@ class cargoModel
 
     public function deleteCargo($id)
     {
-        $stmt = $this->pdo->prepare("DELETE FROM inmuebles WHERE id = :id");
+        $stmt = $this->pdo->prepare("DELETE FROM cargo WHERE id = :id");
         $stmt->bindParam(":id", $id);
         $stmt->execute();
     }

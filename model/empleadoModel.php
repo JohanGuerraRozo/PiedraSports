@@ -36,6 +36,12 @@ class empleadoModel
     {
         $stmt = $this->pdo->prepare("UPDATE FROM empleado WHERE id = :id");
         $stmt->bindParam(":id", $id);
+        $stmt->bindParam(":fech_in_cargo", $fech_in_empleado);
+        $stmt->bindParam(":nom_empleado", $nom_empleado);
+        $stmt->bindParam(":email_empleado", $email_empleado);
+        $stmt->bindParam(":movil_empleado", $movil_empleado);
+        $stmt->bindParam(":drr_empleado", $drr_empleado);
+        $stmt->bindParam(":cargoFk_empleado", $cargoFk_empleado);
 
         $stmt->execute();
     }
