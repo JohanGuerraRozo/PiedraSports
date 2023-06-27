@@ -21,21 +21,22 @@ class cargoModel
     public function setCargo($nomCargo)
     {
         $stmt = $this->pdo->prepare("INSERT INTO cargo VALUES(null, :nomCargo)");
-        $stmt->bindParam(":nom_cargo", $nomCargo);
+        $stmt->bindParam(":nomCargo", $nomCargo);
         $stmt->execute();
     }
 
     public function updateCargo($id, $nomCargo)
     {
+
         $stmt = $this->pdo->prepare("UPDATE cargo SET nom_cargo = :nomCargo");
         $stmt->bindParam(":id", $id);
-        $stmt->bindParam(":nom_cargo", $nomCargo);
+        $stmt->bindParam(":nomCargo", $nomCargo);
         $stmt->execute();
     }
 
     public function deleteCargo($id)
     {
-        $stmt = $this->pdo->prepare("DELETE FROM inmuebles WHERE id = :id");
+        $stmt = $this->pdo->prepare("DELETE FROM cargo WHERE id = :id");
         $stmt->bindParam(":id", $id);
         $stmt->execute();
     }

@@ -20,7 +20,11 @@ class cargoController
             exit;
         } else {
             $this->model->setCargo($nomCargo);
-            echo '<p>Hola</p>';
+            echo '
+            <script>alert("Cargo insertado Correctamente");
+            window.location = "../views/interfaces/registro-cargo.php";
+            </script>
+            ';
         }
     }
 }
