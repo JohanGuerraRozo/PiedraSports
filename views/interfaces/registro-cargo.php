@@ -93,7 +93,8 @@
                                 <td>Mark</td>
                                 <td>Otto</td>
                                 <td>
-                                    <a href=""></a>
+                                    <a href="">Editar</a>
+                                    <a href="">Eliminar</a>
                                 </td>
                             </tr>
                         </tbody>
