@@ -54,9 +54,9 @@
         </nav>
     </div>
     <div class="contenido-principal">
-        <div class="container-sm text-center m-0">
-            <div class="row justify-content-center">
-                <div class="col-sm">
+        <div class="container-sm m-0">
+            <div class="row justify-content-left">
+                <div class="col-5">
                     <div class="card">
                         <div class="card-header">
                             <h1 class="text-center">Registrar un cargo</h1>
@@ -64,7 +64,7 @@
                         <div class="card-body">
                             <form action="../../controller/cargoController.php? action=crear" method="post">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-12">
                                         <div class="form-group text-start">
                                             <label for="nombre">Nombre</label>
                                             <input type="text" class="form-control" name="nom-cargo" id="nombre" required minlength="4" maxlength="20" />
@@ -72,12 +72,32 @@
                                     </div>
                                 </div>
                                 <br />
-                                <div class="text-end">
-                                    <input type="submit" class="btn btn-primary" value="Registrar Cargo" />
+                                <div class="text-start">
+                                    <input type="submit" class="btn btn-primary" name="Registrar" value="Registrar Cargo" />
                                 </div>
                             </form>
                         </div>
                     </div>
+                </div>
+                <div class="col-7">
+                    <table class="table">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">NOMBRE</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>
+                                    <a href=""></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
