@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #ffffffff;
+  height: 100vh;
+  overflow: hidden;
+}
+header {
+  display: flex;
+  background-color: #143d59;
+  height: 80px;
+}
+header h1 {
+  color: #ffffffff;
+  margin-left: 39%;
+}
+header img {
+  margin-top: 15px;
+  width: 60px;
+  height: 60px;
+}
+.loginChiquito {
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #143d59;
+  border-radius: 10px;
+  height: 450px;
+}
+.loginChiquito h2 {
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+.loginChiquito form {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+form .inputBonito {
+  position: relative;
+  margin: 30px 0;
+}
+.inputBonito input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.inputBonito label {
+  position: absolute;
+  top: 50%;
+  color: #ffffff;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.inputBonito span::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #f4b41a;
+  transition: 0.5s;
+}
+.inputBonito input:focus ~ label,
+.inputBonito input:valid ~ label {
+  top: -5px;
+  color: #f4b41a;
+}
+.inputBonito input:focus,
+.inputBonito input:valid {
+  color: #ffffff;
+}
+.inputBonito input:focus ~ span::before,
+.inputBonito input:valid ~ span::before {
+  color: #f4b41a;
+  width: 100%;
+}
+.contra {
+  margin: -5px 0 20px 5px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.contra:hover {
+  text-decoration: underline;
+}
+input[type="submit"] {
+  margin-top: 20px;
+  margin-left: 75px;
+  width: 50%;
+  height: 50px;
+  border: none;
+  border-radius: 15px;
+  background: #ffffff;
+  cursor: pointer;
+  outline: none;
+  transition: 0.5s;
+}
+input[type="submit"]:hover {
+  border: 1px solid #f4b41a;
+  outline: none;
+  background-color: #f4b41a;
+}
+input[type="submit"] a {
+  text-decoration: none;
+  color: black;
+}
+.registrate {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #ffffff;
+}
+.registrate a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.registrate a:hover {
+  text-decoration: underline;
+}
+.error {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: large;
+  color: red;
+  display: block;
+}
