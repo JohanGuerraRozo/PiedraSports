@@ -64,25 +64,30 @@
                                     <div class="col-12">
                                         <div class="form-group text-start">
                                             <label for="nom_cliente">Nombre</label>
-                                            <input type="text" class="form-control" name="nom_cliente" id="nom_cliente" required minlength="4" maxlength="20" />
+                                            <input type="text" class="form-control" name="nom_cliente" id="nom_cliente"
+                                                required minlength="4" maxlength="20" />
                                         </div>
                                         <div class="form-group text-start">
                                             <label for="apell_cliente">Apellido</label>
-                                            <input type="text" class="form-control" name="apell_cliente" id="apell_cliente" required minlength="4" maxlength="20" />
+                                            <input type="text" class="form-control" name="apell_cliente"
+                                                id="apell_cliente" required minlength="4" maxlength="20" />
                                         </div>
                                         <div class="form-group text-start">
                                             <label for="drr_cliente">Direccion</label>
-                                            <input type="text" class="form-control" name="drr_cliente" id="drr_cliente" required minlength="4" maxlength="20" />
+                                            <input type="text" class="form-control" name="drr_cliente" id="drr_cliente"
+                                                required minlength="4" maxlength="20" />
                                         </div>
                                         <div class="form-group text-start">
                                             <label for="email_cliente">Email</label>
-                                            <input type="email" class="form-control" name="email_cliente" id="email_cliente" required minlength="4" maxlength="20" />
+                                            <input type="email" class="form-control" name="email_cliente"
+                                                id="email_cliente" required minlength="4" maxlength="20" />
                                         </div>
                                     </div>
                                 </div>
                                 <br />
                                 <div class="text-start">
-                                    <input type="submit" class="btn btn-primary" name="Registrar_cli" value="Registrar Cliente" />
+                                    <input type="submit" class="btn btn-primary" name="Registrar_cli"
+                                        value="Registrar Cliente" />
                                 </div>
                             </form>
                         </div>
@@ -108,8 +113,8 @@
                                 <td></td>
                                 <td></td>
                                 <td>
-                                    <a href="">Editar</a>
-                                    <a href="">Eliminar</a>
+                                    <a href="" class="btn btn-small btn-warning"><i class="fa-solid fa-pen"></i></a>
+                                    <a href="" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
                                 </td>
                             </tr>
                         </tbody>
@@ -117,6 +122,7 @@
                 </div>
             </div>
         </div>
+        <script src="https://kit.fontawesome.com/19e0e62144.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

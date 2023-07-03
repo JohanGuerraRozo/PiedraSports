@@ -102,8 +102,8 @@
                                 <td></td>
                                 <td></td>
                                 <td>
-                                    <a href="">Editar</a>
-                                    <a href="">Eliminar</a>
+                                    <a href="" class="btn btn-small btn-warning"><i class="fa-solid fa-pen"></i></a>
+                                    <a href="" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
                                 </td>
                             </tr>
                         </tbody>
@@ -111,6 +111,7 @@
                 </div>
             </div>
         </div>
+        <script src="https://kit.fontawesome.com/19e0e62144.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

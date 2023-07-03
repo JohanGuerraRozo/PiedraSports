@@ -64,37 +64,45 @@
                                     <div class="col-12">
                                         <div class="form-group text-start">
                                             <label for="precioTotal_venta">Precio Total</label>
-                                            <input type="number" class="form-control" name="precioTotal_venta" id="precioTotal_venta" required minlength="4" maxlength="20" />
+                                            <input type="number" class="form-control" name="precioTotal_venta"
+                                                id="precioTotal_venta" required minlength="4" maxlength="20" />
                                         </div>
                                         <div class="form-group text-start">
                                             <label for="precioUnitario_venta">Precio Unitario</label>
-                                            <input type="number" class="form-control" name="precioUnitario_venta" id="precioUnitario_venta" required minlength="4" maxlength="20" />
+                                            <input type="number" class="form-control" name="precioUnitario_venta"
+                                                id="precioUnitario_venta" required minlength="4" maxlength="20" />
                                         </div>
                                         <div class="form-group text-start">
                                             <label for="cantProducto_venta">Cantidad</label>
-                                            <input type="number" class="form-control" name="cantProducto_venta" id="cantProducto_venta" required minlength="4" maxlength="20" />
+                                            <input type="number" class="form-control" name="cantProducto_venta"
+                                                id="cantProducto_venta" required minlength="4" maxlength="20" />
                                         </div>
                                         <div class="form-group text-start">
                                             <label for="formaPago_venta">Forma de pago</label>
-                                            <input type="text" class="form-control" name="formaPago_venta" id="formaPago_venta" required minlength="4" maxlength="20" />
+                                            <input type="text" class="form-control" name="formaPago_venta"
+                                                id="formaPago_venta" required minlength="4" maxlength="20" />
                                         </div>
                                         <div class="form-group text-start">
                                             <label for="fecha_venta">fecha</label>
-                                            <input type="date" class="form-control" name="fecha_venta" id="fecha_venta" required minlength="4" maxlength="20" />
+                                            <input type="date" class="form-control" name="fecha_venta" id="fecha_venta"
+                                                required minlength="4" maxlength="20" />
                                         </div>
                                         <div class="form-group text-start">
                                             <label for="pedidoFK_venta">Id Pedido</label>
-                                            <input type="number" class="form-control" name="pedidoFK_venta" id="pedidoFK_venta" required minlength="4" maxlength="20" />
+                                            <input type="number" class="form-control" name="pedidoFK_venta"
+                                                id="pedidoFK_venta" required minlength="4" maxlength="20" />
                                         </div>
                                         <div class="form-group text-start">
                                             <label for="empleadoFK_venta">Id Empleado</label>
-                                            <input type="number" class="form-control" name="empleadoFK_venta" id="empleadoFK_venta" required minlength="4" maxlength="20" />
+                                            <input type="number" class="form-control" name="empleadoFK_venta"
+                                                id="empleadoFK_venta" required minlength="4" maxlength="20" />
                                         </div>
                                     </div>
                                 </div>
                                 <br />
                                 <div class="text-start">
-                                    <input type="submit" class="btn btn-primary" name="Registrar_venta" value="Registrar Venta" />
+                                    <input type="submit" class="btn btn-primary" name="Registrar_venta"
+                                        value="Registrar Venta" />
                                 </div>
                             </form>
                         </div>
@@ -126,8 +134,8 @@
                                 <td></td>
                                 <td></td>
                                 <td>
-                                    <a href="">Editar</a>
-                                    <a href="">Eliminar</a>
+                                    <a href="" class="btn btn-small btn-warning"><i class="fa-solid fa-pen"></i></a>
+                                    <a href="" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
                                 </td>
                             </tr>
                         </tbody>
@@ -135,6 +143,7 @@
                 </div>
             </div>
         </div>
+        <script src="https://kit.fontawesome.com/19e0e62144.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
