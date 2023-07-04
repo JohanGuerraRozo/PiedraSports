@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../Css/registro-empleado.css" />
+    <link rel="stylesheet" href="../Css/dashboard.css" />
     <!--Boostrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <title>Registro Compra</title>
@@ -67,19 +67,19 @@
                                     <div class="col-12">
                                         <div class="form-group text-start">
                                             <label for="preci_compra">Precio</label>
-                                            <input type="number" class="form-control" name="preci_compra" id="preci_compra" required minlength="4" maxlength="20" />
+                                            <input type="number" class="form-control" name="preci_compra" id="preci_compra"/>
                                         </div>
                                         <div class="form-group text-start">
                                             <label for="fech_compra">Fecha</label>
-                                            <input type="date" class="form-control" name="fech_compra" id="fech_compra" required minlength="4" maxlength="20" />
+                                            <input type="date" class="form-control" name="fech_compra" id="fech_compra" required/>
                                         </div>
                                         <div class="form-group text-start">
                                             <label for="forpago_compra">Forma De Pago</label>
-                                            <input type="text" class="form-control" name="forpago_compra" id="forpago_compra" required minlength="4" maxlength="20" />
+                                            <input type="text" class="form-control" name="forpago_compra" id="forpago_compra" required minlength="4" maxlength="20"/>
                                         </div>
                                         <div class="form-group text-start">
                                             <label for="proveFK_compra">Id Proveedor</label>
-                                            <input type="number" class="form-control" name="proveFK_compra" id="proveFK_compra" required minlength="4" maxlength="20" />
+                                            <input type="number" class="form-control" name="proveFK_compra" id="proveFK_compra"/>
                                         </div>
                                     </div>
                                 </div>
@@ -121,6 +121,7 @@
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../Js/compra.js"></script>
 </body>
 
 </html>
