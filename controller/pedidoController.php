@@ -11,10 +11,10 @@ class pedidoController
 
     public function setPedido($desc_pedido, $fech_pedido, $clienteFK_pedido)
     {
-        if ($desc_pedido == null || $fech_pedido || $clienteFK_pedido == null) {
+        if ($desc_pedido == null || $fech_pedido == null || $clienteFK_pedido == null) {
             echo '
             <script>alert("Completa los campos para poder registrar el pedido");
-            window.locatio = "../views/interfaces/form-pedido.php";
+            window.location = "../views/interfaces/form-pedido.php";
             </script>
             ';
             exit;
@@ -22,7 +22,7 @@ class pedidoController
             $this->model->setPedido($desc_pedido, $fech_pedido, $clienteFK_pedido);
             echo '
             <script>alert("Pedido registrado Correctamenta");
-            window.locatio = "../views/interfaces/form-pedido.php";
+            window.location = "../views/interfaces/form-pedido.php";
             </script>
             ';
         }

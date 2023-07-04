@@ -64,18 +64,22 @@
                                     <div class="col-12">
                                         <div class="form-group text-start">
                                             <label for="desc_pedido">Descripcion</label>
-                                            <input type="text" class="form-control" name="desc_pedido" id="desc_pedido" required minlength="4" maxlength="20" />
+                                            <input type="text" class="form-control" name="desc_pedido" id="desc_pedido"
+                                                required minlength="4" maxlength="20" />
                                             <div class="form-group text-start">
                                                 <label for="fech_pedido">Fecha</label>
-                                                <input type="date" class="form-control" name="fech_pedido" id="fech_pedido" required minlength="4" maxlength="20" />
+                                                <input type="date" class="form-control" name="fech_pedido"
+                                                    id="fech_pedido" required minlength="4" maxlength="20" />
                                                 <div class="form-group text-start">
                                                     <label for="clienteFK_pedido">Id Cliente</label>
-                                                    <input type="number" class="form-control" name="clienteFK_pedido" id="clienteFK_pedido" required minlength="4" maxlength="20" />
+                                                    <input type="number" class="form-control" name="clienteFK_pedido"
+                                                        id="clienteFK_pedido" required minlength="4" maxlength="20" />
                                                 </div>
                                             </div>
                                             <br />
                                             <div class="text-start">
-                                                <input type="submit" class="btn btn-primary" name="Registrar_ped" value="Registrar Pedido" />
+                                                <input type="submit" class="btn btn-primary" name="Registrar_ped"
+                                                    value="Registrar Pedido" />
                                             </div>
                                         </div>
                                     </div>
@@ -108,7 +112,7 @@
                                 echo '<td>' . $datos['ID_CLIENTE_FK_PEDIDO'] . '</td>';
                                 echo '<td>';
                                 echo '<a href="" class="btn btn-small btn-warning" data-bs-toggle="modal" data-bs-target="#editarModal"><i class="fa-solid fa-pen"></i></a>';
-                                echo '<a href="form-rol.php?id=' . $datos['ID_PEDIDO'] . '  " class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>';
+                                echo '<a href="form-pedido.php?id=' . $datos['ID_PEDIDO'] . '  " class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>';
                                 echo '</td>';
                                 echo '</tr>';
                             }
@@ -139,18 +143,22 @@
                                     $pedido = $pedidoController->obtenerPorId($_GET['id-ped']); ?>
                                     <div class="form-group text-start">
                                         <label for="id">ID</label>
-                                        <input type="text" class="form-control" name="id-pedido" id="id-pedido" value="<?php echo $pedido[0]; ?>" readonly="readonly" />
+                                        <input type="text" class="form-control" name="id-pedido" id="id-pedido"
+                                            value="<?php echo $pedido[0]; ?>" readonly="readonly" />
                                         <label for="desc_pedido">Descripcion</label>
-                                        <input type="text" class="form-control" name="desc_pedido" id="desc_pedido" value="<?php echo $pedido[1]; ?>" required minlength="4" maxlength="20" />
+                                        <input type="text" class="form-control" name="desc_pedido" id="desc_pedido"
+                                            value="<?php echo $pedido[1]; ?>" required minlength="4" maxlength="20" />
                                         <label for="fech_pedido">Fecha</label>
-                                        <input type="date" class="form-control" name="fech_pedido" id="fech_pedido" <label for="id">ID</label>
-                                        <input type="text" class="form-control" name="id-rol" id="id-rol" value="<?php echo $pedido[2]; ?>" readonly="readonly" required minlength="4" maxlength="20" />
+                                        <input type="date" class="form-control" name="fech_pedido" id="fech_pedido"
+                                            value="<?php echo $pedido[2]; ?>" required minlength="4" maxlength="20" />
                                         <label for="clienteFK_pedido">Id Cliente</label>
-                                        <input type="number" class="form-control" name="clienteFK_pedido" id="clienteFK_pedido" value="<?php echo $pedido[3]; ?>" </div>
+                                        <input type="number" class="form-control" name="clienteFK_pedido"
+                                            id="clienteFK_pedido" value="<?php echo $pedido[3]; ?>" </div>
                                     </div>
                                     <br>
                                     <div class="text-start">
-                                        <input type="submit" class="btn btn-primary" name="Modificar" value="Modificar Rol" />
+                                        <input type="submit" class="btn btn-primary" name="Modificar"
+                                            value="Modificar Rol" />
                                     </div>
                             </form>
                         </div>
