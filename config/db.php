@@ -3,8 +3,8 @@ class db
 {
     private $host = "localhost";
     private $dbname = "piedrasportsdb";
-    private $user = "root";
-    private $password = "";
+    private $user = "Administrador";
+    private $password = "J1013105691o+";
 
     public function conexion()
     {
