@@ -64,25 +64,21 @@
                                     <div class="col-12">
                                         <div class="form-group text-start">
                                             <label for="desc_pedido">Descripcion</label>
-                                            <input type="text" class="form-control" name="desc_pedido" id="desc_pedido"
-                                                required minlength="4" maxlength="20" />
+                                            <input type="text" class="form-control" name="desc_pedido" id="desc_pedido" required minlength="4" maxlength="20" />
                                         </div>
                                         <div class="form-group text-start">
                                             <label for="fech_pedido">Fecha</label>
-                                            <input type="date" class="form-control" name="fech_pedido" id="fech_pedido"
-                                                required minlength="4" maxlength="20" />
+                                            <input type="date" class="form-control" name="fech_pedido" id="fech_pedido" required minlength="4" maxlength="20" />
                                         </div>
                                         <div class="form-group text-start">
                                             <label for="clienteFK_pedido">Id Cliente</label>
-                                            <input type="number" class="form-control" name="clienteFK_pedido"
-                                                id="clienteFK_pedido" required minlength="4" maxlength="20" />
+                                            <input type="number" class="form-control" name="clienteFK_pedido" id="clienteFK_pedido" required minlength="4" maxlength="20" />
                                         </div>
                                     </div>
                                 </div>
                                 <br />
                                 <div class="text-start">
-                                    <input type="submit" class="btn btn-primary" name="Registrar_ped"
-                                        value="Registrar Pedido" />
+                                    <input type="submit" class="btn btn-primary" name="Registrar_ped" value="Registrar Pedido" />
                                 </div>
                             </form>
                         </div>
@@ -117,6 +113,7 @@
         </div>
         <script src="https://kit.fontawesome.com/19e0e62144.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../Js/pedido.js"></script>
 </body>
 
 </html>

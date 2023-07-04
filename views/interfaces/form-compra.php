@@ -64,30 +64,25 @@
                                     <div class="col-12">
                                         <div class="form-group text-start">
                                             <label for="preci_compra">Precio</label>
-                                            <input type="number" class="form-control" name="preci_compra"
-                                                id="preci_compra" required minlength="4" maxlength="20" />
+                                            <input type="number" class="form-control" name="preci_compra" id="preci_compra" required minlength="4" maxlength="20" />
                                         </div>
                                         <div class="form-group text-start">
                                             <label for="fech_compra">Fecha</label>
-                                            <input type="date" class="form-control" name="fech_compra" id="fech_compra"
-                                                required minlength="4" maxlength="20" />
+                                            <input type="date" class="form-control" name="fech_compra" id="fech_compra" required minlength="4" maxlength="20" />
                                         </div>
                                         <div class="form-group text-start">
                                             <label for="forpago_compra">Forma De Pago</label>
-                                            <input type="text" class="form-control" name="forpago_compra"
-                                                id="forpago_compra" required minlength="4" maxlength="20" />
+                                            <input type="text" class="form-control" name="forpago_compra" id="forpago_compra" required minlength="4" maxlength="20" />
                                         </div>
                                         <div class="form-group text-start">
                                             <label for="proveFK_compra">Id Proveedor</label>
-                                            <input type="number" class="form-control" name="proveFK_compra"
-                                                id="proveFK_compra" required minlength="4" maxlength="20" />
+                                            <input type="number" class="form-control" name="proveFK_compra" id="proveFK_compra" required minlength="4" maxlength="20" />
                                         </div>
                                     </div>
                                 </div>
                                 <br />
                                 <div class="text-start">
-                                    <input type="submit" class="btn btn-primary" name="Registrar_com"
-                                        value="Registrar Compra" />
+                                    <input type="submit" class="btn btn-primary" name="Registrar_com" value="Registrar Compra" />
                                 </div>
                             </form>
                         </div>
@@ -124,6 +119,7 @@
         </div>
         <script src="https://kit.fontawesome.com/19e0e62144.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../Js/compra.js"></script>
 </body>
 
 </html>
