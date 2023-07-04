@@ -95,7 +95,7 @@
                                 echo '<td> <a href="form-rol.php?id-ro=' . $datos['ID_ROL'] . '">' . $datos['ID_ROL'] . '</a> </td>';
                                 echo '<td>' . $datos['NOM_ROL'] . '</td>';
                                 echo '<td>';
-                                echo '<a href="" class="btn btn-small btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-pen"></i></a>';
+                                echo '<a href="" class="btn btn-small btn-warning" data-bs-toggle="modal" data-bs-target="#editarModal"><i class="fa-solid fa-pen"></i></a>';
                                 echo '<a href="form-rol.php?id=' . $datos['ID_ROL'] . '  " class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>';
                                 echo '</td>';
                                 echo '</tr>';
@@ -107,11 +107,11 @@
             </div>
         </div>
         <!--Modal-->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="editarModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Actualizar cargo</h5>
+                        <h5 class="modal-title" id="editarModalLabel">Actualizar cargo</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
 
