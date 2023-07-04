@@ -59,26 +59,26 @@
                             <h1 class="text-center">Registrar un pedido</h1>
                         </div>
                         <div class="card-body">
-                            <form action="../../controller/cargoController.php? action=crear" method="post">
+                            <form action="../../controller/pedidoController.php? action=crear" method="post">
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="form-group text-start">
                                             <label for="desc_pedido">Descripcion</label>
                                             <input type="text" class="form-control" name="desc_pedido" id="desc_pedido" required minlength="4" maxlength="20" />
-                                        </div>
-                                        <div class="form-group text-start">
-                                            <label for="fech_pedido">Fecha</label>
-                                            <input type="date" class="form-control" name="fech_pedido" id="fech_pedido" required minlength="4" maxlength="20" />
-                                        </div>
-                                        <div class="form-group text-start">
-                                            <label for="clienteFK_pedido">Id Cliente</label>
-                                            <input type="number" class="form-control" name="clienteFK_pedido" id="clienteFK_pedido" required minlength="4" maxlength="20" />
+                                            <div class="form-group text-start">
+                                                <label for="fech_pedido">Fecha</label>
+                                                <input type="date" class="form-control" name="fech_pedido" id="fech_pedido" required minlength="4" maxlength="20" />
+                                                <div class="form-group text-start">
+                                                    <label for="clienteFK_pedido">Id Cliente</label>
+                                                    <input type="number" class="form-control" name="clienteFK_pedido" id="clienteFK_pedido" required minlength="4" maxlength="20" />
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <div class="text-start">
+                                                <input type="submit" class="btn btn-primary" name="Registrar_ped" value="Registrar Pedido" />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <br />
-                                <div class="text-start">
-                                    <input type="submit" class="btn btn-primary" name="Registrar_ped" value="Registrar Pedido" />
                                 </div>
                             </form>
                         </div>
@@ -92,28 +92,79 @@
                                 <th scope="col">DESCRIPCION</th>
                                 <th scope="col">FECHA</th>
                                 <th scope="col">ID_CLIENTE</th>
-                                <th scope="col"></th>
+                                <th scope="col">OPCIONES</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <a href="" class="btn btn-small btn-warning"><i class="fa-solid fa-pen"></i></a>
-                                    <a href="" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
-                                </td>
-                            </tr>
+                            <?php
+                            include_once '../../controller/pedidoController.php';
+                            $pedidoController = new pedidoController();
+                            $buscar = $pedidoController->getPedido();
+                            foreach ($buscar as $datos) {
+                                echo '<tr>';
+                                echo '<td> <a href="form-pedido.php?id-ped=' . $datos['ID_PEDIDO'] . '">' . $datos['ID_PEDIDO'] . '</a> </td>';
+                                echo '<td>' . $datos['DESC_PEDIDO'] . '</td>';
+                                echo '<td>' . $datos['FECH_PEDIDO'] . '</td>';
+                                echo '<td>' . $datos['ID_CLIENTE_FK_PEDIDO'] . '</td>';
+                                echo '<td>';
+                                echo '<a href="" class="btn btn-small btn-warning" data-bs-toggle="modal" data-bs-target="#editarModal"><i class="fa-solid fa-pen"></i></a>';
+                                echo '<a href="form-rol.php?id=' . $datos['ID_PEDIDO'] . '  " class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>';
+                                echo '</td>';
+                                echo '</tr>';
+                            }
+                            ?>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-        <script src="https://kit.fontawesome.com/19e0e62144.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="../Js/pedido.js"></script>
+    </div>
+    <!--Modal-->
+    <div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="editarModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editarModalLabel">Actualizar pedido</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <form action="../../controller/pedidoController.php? action=modificar" method="post">
+                                <div class="form-group text-start">
+                                    <?php
+                                    require_once 'C:/xampp/htdocs/PiedraSports/controller/pedidoController.php';
+                                    $pedidoController = new pedidoController();
+                                    $pedido = $pedidoController->obtenerPorId($_GET['id-ped']); ?>
+                                    <div class="form-group text-start">
+                                        <label for="id">ID</label>
+                                        <input type="text" class="form-control" name="id-pedido" id="id-pedido" value="<?php echo $pedido[0]; ?>" readonly="readonly" />
+                                        <label for="desc_pedido">Descripcion</label>
+                                        <input type="text" class="form-control" name="desc_pedido" id="desc_pedido" value="<?php echo $pedido[1]; ?>" required minlength="4" maxlength="20" />
+                                        <label for="fech_pedido">Fecha</label>
+                                        <input type="date" class="form-control" name="fech_pedido" id="fech_pedido" <label for="id">ID</label>
+                                        <input type="text" class="form-control" name="id-rol" id="id-rol" value="<?php echo $pedido[2]; ?>" readonly="readonly" required minlength="4" maxlength="20" />
+                                        <label for="clienteFK_pedido">Id Cliente</label>
+                                        <input type="number" class="form-control" name="clienteFK_pedido" id="clienteFK_pedido" value="<?php echo $pedido[3]; ?>" </div>
+                                    </div>
+                                    <br>
+                                    <div class="text-start">
+                                        <input type="submit" class="btn btn-primary" name="Modificar" value="Modificar Rol" />
+                                    </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/19e0e62144.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../Js/pedido.js"></script>
 </body>
 
 </html>

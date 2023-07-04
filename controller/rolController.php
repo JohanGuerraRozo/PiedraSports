@@ -93,17 +93,3 @@ if (!empty($_GET['id-ro'])) {
     $rolController = new rolController();
     $resultado = $rolController->obtenerPorId($_GET['id-ro']);
 }
-// if (!empty($_GET["id_rol"])) {
-
-//     $id = $_GET['id_rol'];
-//     $rolController = new rolController();
-//     $resultado = $rolController->deleteRol($id);
-//     if ($resultado == 1) {
-//     } else {
-//         echo '
-//             <script>alert("Error al eliminar el Rol");
-//             window.location = "../interfaces/form-rol.php";
-//             </script>
-//             ';
-//     }
-// }

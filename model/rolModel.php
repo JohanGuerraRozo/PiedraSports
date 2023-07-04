@@ -40,6 +40,7 @@ class rolModel
         $stmt->bindParam(":id", $id);
         $stmt->execute();
     }
+
     public function obtenerPorId($id)
     {
         $stmt = $this->pdo->prepare("SELECT * FROM rol WHERE id_rol = :id");
