@@ -5,7 +5,7 @@ class ventaController
 
     public function __construct()
     {
-        require_once("C:/xampp/htdocs/ProyectoPiedraSports/model/ventaModel.php");
+        include_once "C:/xampp/htdocs/PiedraSports/model/ventaModel.php";
         $this->model = new ventaModel();
     }
 
@@ -14,7 +14,7 @@ class ventaController
         if ($precioTotal_venta == null || $precioUnitario_venta == null || $cantProduct_venta == null || $formaPago_venta == null || $fecha_venta == null || $pedidoFK_venta == null || $empleadoFK_venta == null) {
             echo '
             <script>alert("Completa los campos para poder registrar la venta");
-            window.locatio = "../views/interfaces/registro-venta.html";
+            window.location = "../views/interfaces/form-venta.php";
             </script>
             ';
             exit;
@@ -22,10 +22,19 @@ class ventaController
             $this->model->setVenta($precioTotal_venta, $precioUnitario_venta, $cantProduct_venta, $formaPago_venta, $fecha_venta, $pedidoFK_venta, $empleadoFK_venta);
             echo '
             <script>alert("Venta registrada Correctamente");
-            window.locatio = "../views/interfaces/registro-venta.html";
+            window.location = "../views/interfaces/form-venta.php";
             </script>
             ';
         }
+    }
+
+    public function getVenta()
+    {
+        return $this->model->getVenta();
+    }
+    public function deleteVenta($id)
+    {
+        $this->model->deleteVenta($id);
     }
 }
 
@@ -39,8 +48,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $fecha_venta = $_POST['fecha_venta'];
         $pedidoFK_venta = $_POST['pedidoFK_venta'];
         $empleadoFK_venta = $_POST['empleadoFK_venta'];
-
+        $ventaController->setVenta($precioTotal_venta, $precioUnitario_venta, $cantProduct_venta, $formaPago_venta, $fecha_venta, $pedidoFK_venta, $empleadoFK_venta);
 
         exit;
+    }
+}
+
+if (!empty($_GET['id'])) {
+    $ventaController = new ventaController();
+    $resultado = $ventaController->deleteVenta($_GET['id']);
+    if ($resultado != 0) {
+        echo
+        '<script>alert("Error");
+        window.location = "../interfaces/form-venta.php";
+        </script>
+        ';
+    } else {
+        echo
+        '<script>alert("Venta eliminada Correctamente");
+        window.location = "../interfaces/form-venta.php";
+        </script>
+        ';
     }
 }

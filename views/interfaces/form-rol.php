@@ -92,23 +92,60 @@
                             $buscar = $rolController->getRol();
                             foreach ($buscar as $datos) {
                                 echo '<tr>';
-                                echo '<td>' . $datos['ID_ROL'] . '</td>';
+                                echo '<td> <a href="form-rol.php?id-ro=' . $datos['ID_ROL'] . '">' . $datos['ID_ROL'] . '</a> </td>';
                                 echo '<td>' . $datos['NOM_ROL'] . '</td>';
                                 echo '<td>';
-                                echo '<a href="" class="btn btn-small btn-warning"><i class="fa-solid fa-pen"></i></a>';
-                                echo '<a href="form-rol.php?id=' . $datos['ID_ROL'] . '  " class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>' ?>
-                                <?php echo '</td>'; ?>
-                            <?php echo '</tr>';
+                                echo '<a href="" class="btn btn-small btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-pen"></i></a>';
+                                echo '<a href="form-rol.php?id=' . $datos['ID_ROL'] . '  " class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>';
+                                echo '</td>';
+                                echo '</tr>';
                             }
                             ?>
-
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-        <script src="https://kit.fontawesome.com/19e0e62144.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!--Modal-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Actualizar cargo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <form action="../../controller/rolController.php? action=modificar" method="post">
+                                    <div class="form-group text-start">
+                                        <?php
+                                        require_once 'C:/xampp/htdocs/PiedraSports/controller/rolController.php';
+                                        $rolController = new rolController();
+                                        $rol = $rolController->obtenerPorId($_GET['id-ro']); ?>
+                                        <label for="id">ID</label>
+                                        <input type="text" class="form-control" name="id-rol" id="id-rol" value="<?php echo $rol[0]; ?>" readonly="readonly" />
+                                        <label for="id-rol">Nombre</label>
+                                        <input type="text" class="form-control" name="nom-rol" id="nom-rol" value="<?php echo $rol[1]; ?>" />
+                                    </div>
+                                    <br>
+                                    <div class="text-start">
+                                        <input type="submit" class="btn btn-primary" name="Modificar" value="Modificar Rol" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/19e0e62144.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

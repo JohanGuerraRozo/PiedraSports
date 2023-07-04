@@ -25,11 +25,11 @@ class rolModel
         $stmt->execute();
     }
 
-    public function updateRol($id, $nomRol)
+    public function updateRol($idRol, $nomRol)
     {
 
-        $stmt = $this->pdo->prepare("UPDATE rol SET nom_rol = :nomRol");
-        $stmt->bindParam(":id", $id);
+        $stmt = $this->pdo->prepare("UPDATE rol SET nom_rol = :nomRol WHERE id_rol = :id");
+        $stmt->bindParam(":id", $idRol);
         $stmt->bindParam(":nomRol", $nomRol);
         $stmt->execute();
     }
@@ -39,5 +39,13 @@ class rolModel
         $stmt = $this->pdo->prepare("DELETE FROM rol WHERE ID_ROL = :id");
         $stmt->bindParam(":id", $id);
         $stmt->execute();
+    }
+    public function obtenerPorId($id)
+    {
+        $stmt = $this->pdo->prepare("SELECT * FROM rol WHERE id_rol = :id");
+        $stmt->bindParam(":id", $id);
+        $stmt->execute();
+
+        return $stmt->fetch();
     }
 }

@@ -59,50 +59,42 @@
                             <h1 class="text-center">Registrar una Venta</h1>
                         </div>
                         <div class="card-body">
-                            <form action="../../controller/cargoController.php? action=crear" method="post">
+                            <form action="../../controller/ventaController.php? action=crear" method="POST">
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="form-group text-start">
                                             <label for="precioTotal_venta">Precio Total</label>
-                                            <input type="number" class="form-control" name="precioTotal_venta"
-                                                id="precioTotal_venta" required minlength="4" maxlength="20" />
+                                            <input type="number" class="form-control" name="precioTotal_venta" id="precioTotal_venta" required minlength="4" maxlength="20" />
                                         </div>
                                         <div class="form-group text-start">
                                             <label for="precioUnitario_venta">Precio Unitario</label>
-                                            <input type="number" class="form-control" name="precioUnitario_venta"
-                                                id="precioUnitario_venta" required minlength="4" maxlength="20" />
+                                            <input type="number" class="form-control" name="precioUnitario_venta" id="precioUnitario_venta" required minlength="4" maxlength="20" />
                                         </div>
                                         <div class="form-group text-start">
-                                            <label for="cantProducto_venta">Cantidad</label>
-                                            <input type="number" class="form-control" name="cantProducto_venta"
-                                                id="cantProducto_venta" required minlength="4" maxlength="20" />
+                                            <label for="cantProduct_venta">Cantidad</label>
+                                            <input type="number" class="form-control" name="cantProduct_venta" id="cantProduct_venta" required minlength="4" maxlength="20" />
                                         </div>
                                         <div class="form-group text-start">
                                             <label for="formaPago_venta">Forma de pago</label>
-                                            <input type="text" class="form-control" name="formaPago_venta"
-                                                id="formaPago_venta" required minlength="4" maxlength="20" />
+                                            <input type="text" class="form-control" name="formaPago_venta" id="formaPago_venta" required minlength="4" maxlength="20" />
                                         </div>
                                         <div class="form-group text-start">
                                             <label for="fecha_venta">fecha</label>
-                                            <input type="date" class="form-control" name="fecha_venta" id="fecha_venta"
-                                                required minlength="4" maxlength="20" />
+                                            <input type="date" class="form-control" name="fecha_venta" id="fecha_venta" required minlength="4" maxlength="20" />
                                         </div>
                                         <div class="form-group text-start">
                                             <label for="pedidoFK_venta">Id Pedido</label>
-                                            <input type="number" class="form-control" name="pedidoFK_venta"
-                                                id="pedidoFK_venta" required minlength="4" maxlength="20" />
+                                            <input type="number" class="form-control" name="pedidoFK_venta" id="pedidoFK_venta" required minlength="4" maxlength="20" />
                                         </div>
                                         <div class="form-group text-start">
                                             <label for="empleadoFK_venta">Id Empleado</label>
-                                            <input type="number" class="form-control" name="empleadoFK_venta"
-                                                id="empleadoFK_venta" required minlength="4" maxlength="20" />
+                                            <input type="number" class="form-control" name="empleadoFK_venta" id="empleadoFK_venta" required minlength="4" maxlength="20" />
                                         </div>
                                     </div>
                                 </div>
                                 <br />
                                 <div class="text-start">
-                                    <input type="submit" class="btn btn-primary" name="Registrar_venta"
-                                        value="Registrar Venta" />
+                                    <input type="submit" class="btn btn-primary" name="Registrar_venta" value="Registrar Venta" />
                                 </div>
                             </form>
                         </div>
@@ -124,19 +116,31 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <a href="" class="btn btn-small btn-warning"><i class="fa-solid fa-pen"></i></a>
-                                    <a href="" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
-                                </td>
+                            <?php
+                            include_once '../../controller/ventaController.php';
+                            $ventaController = new ventaController();
+                            $buscar = $ventaController->getVenta();
+                            foreach ($buscar as $datos) {
+                                echo '<tr>';
+                                echo '<td>' . $datos['ID_VENTA'] . '</td>';
+                                echo '<td>' . $datos['PRECIO_TOTAL_VENTA'] . '</td>';
+                                echo '<td>' . $datos['PRECIO_UNITARIO_VENTA_VENTA'] . '</td>';
+                                echo '<td>' . $datos['FECHA_VENTA'] . '</td>';
+                                echo '<td>' . $datos['CANT_PRODUCTO_VENTA'] . '</td>';
+                                echo '<td>' . $datos['FORMA_PAGO_VENTA'] . '</td>';
+                                echo '<td>' . $datos['ID_PEDIDO_FK_VENTA'] . '</td>';
+                                echo '<td>' . $datos['ID_EMPLEADO_FK_VENTA'] . '</td>';
+                                echo '<td>';
+                                echo '<a href="" class="btn btn-small btn-warning"><i class="fa-solid fa-pen"></i></a>';
+                                echo '<a href="form-venta.php?id=' . $datos['ID_VENTA'] . '" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>';
+                                echo '</td>';
+                            }
+                            ?>
+
+                            <td>
+
+
+                            </td>
                             </tr>
                         </tbody>
                     </table>

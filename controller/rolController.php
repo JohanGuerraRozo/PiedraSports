@@ -28,6 +28,21 @@ class rolController
         }
     }
 
+    public function updateRol($idRol, $nomRol)
+    {
+        $this->model->updateRol($idRol, $nomRol);
+        echo '
+            <script>alert("Rol actualizado Correctamente");
+            window.location = "../views/interfaces/form-rol.php";
+            </script>
+            ';
+    }
+
+    public function obtenerPorId($id)
+    {
+        return $this->model->obtenerPorId($id);
+    }
+
     public function getRol()
     {
         return $this->model->getRol();
@@ -36,11 +51,6 @@ class rolController
     public function deleteRol($id)
     {
         $this->model->deleteRol($id);
-        // echo '
-        //     <script>alert("Rol eliminnado Correctamente");
-        //     window.location = "../interfaces/form-rol.php";
-        //     </script>
-        //     ';
     }
 }
 
@@ -49,6 +59,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($_GET['action'] == 'crear') {
         $nomRol = $_POST['nom-rol'];
         $rolController->setRol($nomRol);
+
+        exit;
+    }
+    if ($_GET['action'] == 'modificar') {
+        $idRol = $_POST['id-rol'];
+        $nomRol = $_POST['nom-rol'];
+        $rolController->updateRol($idRol, $nomRol);
 
         exit;
     }
@@ -71,6 +88,10 @@ if (!empty($_GET['id'])) {
         </script>
         ';
     }
+}
+if (!empty($_GET['id-ro'])) {
+    $rolController = new rolController();
+    $resultado = $rolController->obtenerPorId($_GET['id-ro']);
 }
 // if (!empty($_GET["id_rol"])) {
 
