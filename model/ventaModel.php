@@ -5,14 +5,14 @@ class ventaModel
 
     public function __construct()
     {
-        require_once "C:/xampp/htdocs/ProyectoPiedraSports/config/db.php";
+        require_once("C:/xampp/htdocs/PiedraSports/config/db.php");
         $con = new db();
-        $this->$pdo = $con->conexion();
+        $this->pdo = $con->conexion();
     }
 
     public function getVenta()
     {
-        $stmt = $this->pdo->prepare("SELECT * FROM venta ORDER BY id desc");
+        $stmt = $this->pdo->prepare("SELECT * FROM venta ORDER BY id_venta desc");
         $stmt->execute();
 
         return $stmt->fetchAll();
@@ -48,7 +48,7 @@ class ventaModel
 
     public function deleteVenta($id)
     {
-        $stmt = $this->pdo->prepare("DELETE FROM venta WHERE id = :id");
+        $stmt = $this->pdo->prepare("DELETE FROM venta WHERE id_venta = :id");
         $stmt->bindParam(":id", $id);
 
         $stmt->execute();

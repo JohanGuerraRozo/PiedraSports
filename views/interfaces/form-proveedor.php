@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../Css/registro-empleado.css" />
+    <link rel="shortcut icon" href="../Img/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../Css/dashboard.css" />
     <!--Boostrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <title>Registro Proveedor</title>
@@ -20,36 +21,32 @@
         <nav class="menu-desplegable">
             <button class="boton-menu">Ventas</button>
             <div class="Contenido-menu">
-                <a href="ventas.html">Ventas</a>
-                <a href="#">Pedido</a>
-                <a href="#">Catalogo</a>
-                <a href="#">Factura</a>
+                <a href="form-venta.php">Ventas</a>
+                <a href="form-pedido.php">Pedido</a>
+                <!--<a href="#">Catalogo</a>-->
+                <!-- <a href="#">Factura</a> -->
             </div>
         </nav>
         <nav class="menu-desplegable">
             <button class="boton-menu">Compras</button>
             <div class="Contenido-menu">
-                <a href="compra.html">Compra</a>
-                <a href="#">Proveedor</a>
-                <a href="#">Solicitud Compra</a>
-                <a href="#">Pago proveedor</a>
+                <a href="form-compra.php">Compra</a>
+                <a href="form-proveedor.php">Proveedor</a>
             </div>
         </nav>
         <nav class="menu-desplegable">
             <button class="boton-menu">Distribución</button>
             <div class="Contenido-menu">
-                <a href="distribucion.html">distribucion</a>
-                <a href="#">Domicilio</a>
-                <a href="#">Valoracion</a>
-                <a href="#">Seguimiento</a>
+                <a href="form-distribucion.php">Distribucion</a>
+                <!-- <a href="#">Domicilio</a>
+        <a href="#">Valoracion</a>
+        <a href="#">Seguimiento</a> -->
             </div>
         </nav>
         <nav class="menu-desplegable">
             <button class="boton-menu">Inventario</button>
             <div class="Contenido-menu">
-                <a href="inventario.html">Inventario</a>
-                <a href="#">Entradas</a>
-                <a href="#">Salidas</a>
+                <a href="form-producto.php">Producto</a>
             </div>
         </nav>
     </div>
@@ -67,21 +64,25 @@
                                     <div class="col-12">
                                         <div class="form-group text-start">
                                             <label for="nom_proveedor">Nombre</label>
-                                            <input type="text" class="form-control" name="nom_proveedor" id="nom_proveedor" required minlength="4" maxlength="20" />
+                                            <input type="text" class="form-control" name="nom_proveedor"
+                                                id="nom_proveedor" required minlength="4" maxlength="20" />
                                         </div>
                                         <div class="form-group text-start">
                                             <label for="email_proveedor">Email</label>
-                                            <input type="email" class="form-control" name="email_proveedor" id="email_proveedor" required minlength="4" maxlength="20" />
+                                            <input type="email" class="form-control" name="email_proveedor"
+                                                id="email_proveedor" required minlength="4" maxlength="20" />
                                         </div>
                                         <div class="form-group text-start">
                                             <label for="movil_proveedor">Numero de contacto</label>
-                                            <input type="number" class="form-control" name="movil_proveedor" id="movil_proveedor" required minlength="4" maxlength="20" />
+                                            <input type="number" class="form-control" name="movil_proveedor"
+                                                id="movil_proveedor" required minlength="4" maxlength="20" />
                                         </div>
                                     </div>
                                 </div>
                                 <br />
                                 <div class="text-start">
-                                    <input type="submit" class="btn btn-primary" name="Registrar_provee" value="Registrar Proveedor" />
+                                    <input type="submit" class="btn btn-primary" name="Registrar_provee"
+                                        value="Registrar Proveedor" />
                                 </div>
                             </form>
                         </div>
@@ -105,8 +106,8 @@
                                 <td></td>
                                 <td></td>
                                 <td>
-                                    <a href="">Editar</a>
-                                    <a href="">Eliminar</a>
+                                    <a href="" class="btn btn-small btn-warning"><i class="fa-solid fa-pen"></i></a>
+                                    <a href="" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
                                 </td>
                             </tr>
                         </tbody>
@@ -114,6 +115,7 @@
                 </div>
             </div>
         </div>
+        <script src="https://kit.fontawesome.com/19e0e62144.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
