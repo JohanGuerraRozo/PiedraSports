@@ -28,6 +28,21 @@ class ventaController
         }
     }
 
+    public function updateVenta($idVenta, $precioTotal_venta, $precioUnitario_venta, $cantProduct_venta, $formaPago_venta, $fecha_venta, $pedidoFK_venta, $empleadoFK_venta)
+    {
+        $this->model->updateVenta($idVenta, $precioTotal_venta, $precioUnitario_venta, $cantProduct_venta, $formaPago_venta, $fecha_venta, $pedidoFK_venta, $empleadoFK_venta);
+        echo '
+            <script>alert("Venta actualizada Correctamente");
+            window.location = "../views/interfaces/form-venta.php";
+            </script>
+        ';
+    }
+
+    public function obtenerPorId($id)
+    {
+        return $this->model->obtenerPorId($id);
+    }
+
     public function getVenta()
     {
         return $this->model->getVenta();
@@ -52,6 +67,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         exit;
     }
+    if ($_GET['action'] == 'modificar') {
+        $idVenta = $_POST['id-venta'];
+        $precioTotal_venta = $_POST['precioTotal_venta'];
+        $precioUnitario_venta = $_POST['precioUnitario_venta'];
+        $cantProduct_venta = $_POST['cantProduct_venta'];
+        $formaPago_venta = $_POST['formaPago_venta'];
+        $fecha_venta = $_POST['fecha_venta'];
+        $pedidoFK_venta = $_POST['pedidoFK_venta'];
+        $empleadoFK_venta = $_POST['empleadoFK_venta'];
+        $ventaController->updateVenta($idVenta, $precioTotal_venta, $precioUnitario_venta, $cantProduct_venta, $formaPago_venta, $fecha_venta, $pedidoFK_venta, $empleadoFK_venta);
+
+        exit;
+    }
 }
 
 if (!empty($_GET['id'])) {
@@ -70,4 +98,8 @@ if (!empty($_GET['id'])) {
         </script>
         ';
     }
+}
+if (!empty($_GET['id-ven'])) {
+    $ventaController = new ventaController();
+    $resultado = $ventaController->obtenerPorId($_GET['id-ven']);
 }

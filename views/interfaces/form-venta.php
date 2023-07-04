@@ -112,7 +112,7 @@
                                 <th scope="col">FORMA PAGO</th>
                                 <th scope="col">PEDIDO</th>
                                 <th scope="col">EMPLEADO</th>
-                                <th scope="col"></th>
+                                <th scope="col">OPCIONES</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -122,7 +122,7 @@
                             $buscar = $ventaController->getVenta();
                             foreach ($buscar as $datos) {
                                 echo '<tr>';
-                                echo '<td>' . $datos['ID_VENTA'] . '</td>';
+                                echo '<td> <a href="form-venta.php?id-ven=' . $datos['ID_VENTA'] . '">' . $datos['ID_VENTA'] . '</a></td>';
                                 echo '<td>' . $datos['PRECIO_TOTAL_VENTA'] . '</td>';
                                 echo '<td>' . $datos['PRECIO_UNITARIO_VENTA_VENTA'] . '</td>';
                                 echo '<td>' . $datos['FECHA_VENTA'] . '</td>';
@@ -131,25 +131,70 @@
                                 echo '<td>' . $datos['ID_PEDIDO_FK_VENTA'] . '</td>';
                                 echo '<td>' . $datos['ID_EMPLEADO_FK_VENTA'] . '</td>';
                                 echo '<td>';
-                                echo '<a href="" class="btn btn-small btn-warning"><i class="fa-solid fa-pen"></i></a>';
+                                echo '<a href="" class="btn btn-small btn-warning" data-bs-toggle="modal" data-bs-target="#editarModal"><i class="fa-solid fa-pen"></i></a>';
                                 echo '<a href="form-venta.php?id=' . $datos['ID_VENTA'] . '" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>';
                                 echo '</td>';
+                                echo '</tr>';
                             }
                             ?>
-
-                            <td>
-
-
-                            </td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-        <script src="https://kit.fontawesome.com/19e0e62144.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="../Js/venta.js"></script>
+        <!--Modal-->
+        <div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="editarModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editarModalLabel">Actualizar cargo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <form action="../../controller/ventaController.php? action=modificar" method="post">
+                                    <div class="form-group text-start">
+                                        <?php
+                                        require_once 'C:/xampp/htdocs/PiedraSports/controller/ventaController.php';
+                                        $ventaController = new ventaController();
+                                        $venta = $ventaController->obtenerPorId($_GET['id-ven']); ?>
+                                        <label for="id-venta">ID</label>
+                                        <input type="text" class="form-control" name="id-venta" id="id-venta" value="<?php echo $venta[0]; ?>" readonly="readonly" />
+                                        <label for="precioTotal_venta">Precio Total</label>
+                                        <input type="number" class="form-control" name="precioTotal_venta" id="precioTotal_venta" value="<?php echo $venta[1]; ?>" required minlength="4" maxlength="20" />
+                                        <label for="precioUnitario_venta">Precio Unitario</label>
+                                        <input type="number" class="form-control" name="precioUnitario_venta" id="precioUnitario_venta" value="<?php echo $venta[2]; ?>" required minlength="4" maxlength="20" />
+                                        <label for="cantProduct_venta">Cantidad</label>
+                                        <input type="number" class="form-control" name="cantProduct_venta" id="cantProduct_venta" value="<?php echo $venta[3]; ?>" required minlength="4" maxlength="20" />
+                                        <label for="formaPago_venta">Forma de pago</label>
+                                        <input type="text" class="form-control" name="formaPago_venta" id="formaPago_venta" value="<?php echo $venta[4]; ?>" required minlength="4" maxlength="20" />
+                                        <label for="fecha_venta">fecha</label>
+                                        <input type="date" class="form-control" name="fecha_venta" id="fecha_venta" value="<?php echo $venta[5]; ?>" required minlength="4" maxlength="20" />
+                                        <label for="pedidoFK_venta">Id Pedido</label>
+                                        <input type="number" class="form-control" name="pedidoFK_venta" id="pedidoFK_venta" value="<?php echo $venta[6]; ?>" required minlength="4" maxlength="20" />
+                                        <label for="empleadoFK_venta">Id Empleado</label>
+                                        <input type="number" class="form-control" name="empleadoFK_venta" id="empleadoFK_venta" value="<?php echo $venta[7]; ?>" required minlength="4" maxlength="20" />
+                                    </div>
+                                    <br>
+                                    <div class="text-start">
+                                        <input type="submit" class="btn btn-primary" name="Modificar" value="Modificar Venta" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/19e0e62144.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../Js/venta.js"></script>
 </body>
 
 </html>

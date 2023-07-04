@@ -32,9 +32,11 @@ class ventaModel
         $stmt->execute();
     }
 
-    public function updateVenta($id, $precioTotal_venta, $precioUnitario_venta, $cantProduct_venta, $formaPago_venta, $fecha_venta, $pedidoFK_venta, $empleadoFK_venta)
+    public function updateVenta($idVenta, $precioTotal_venta, $precioUnitario_venta, $cantProduct_venta, $formaPago_venta, $fecha_venta, $pedidoFK_venta, $empleadoFK_venta)
     {
-        $stmt = $this->pdo->prepare("UPDATE FROM venta WHERE id = :id");
+        $stmt = $this->pdo->prepare("UPDATE venta SET precio_total_venta = :precioTotal_venta, precio_unitario_venta_venta = :precioUnitario_venta,cant_producto_venta = :cantProduct_venta,
+        forma_pago_venta = :formaPago_venta,fecha_venta= :fecha_venta,id_pedido_fk_venta = :pedidoFK_venta,id_empleado_fk_venta = :empleadoFK_venta WHERE id_venta = :id");
+        $stmt->bindParam(":id", $idVenta);
         $stmt->bindParam(":precioTotal_venta", $precioTotal_venta);
         $stmt->bindParam(":precioUnitario_venta", $precioUnitario_venta);
         $stmt->bindParam(":cantProduct_venta", $cantProduct_venta);
@@ -52,5 +54,14 @@ class ventaModel
         $stmt->bindParam(":id", $id);
 
         $stmt->execute();
+    }
+
+    public function obtenerPorId($id)
+    {
+        $stmt = $this->pdo->prepare("SELECT * FROM venta WHERE id_venta = :id");
+        $stmt->bindParam(":id", $id);
+        $stmt->execute();
+
+        return $stmt->fetch();
     }
 }
