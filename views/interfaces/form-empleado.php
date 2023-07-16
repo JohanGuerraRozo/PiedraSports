@@ -46,6 +46,8 @@
             <button class="boton-menu">Inventario</button>
             <div class="Contenido-menu">
                 <a href="form-producto.php">Producto</a>
+                <a href="Reportes/reporte_venta.php">Reporte Venta</a>
+                <a href="Reportes/reporte_compra.php">Reporte Compra</a>
             </div>
         </nav>
     </div>

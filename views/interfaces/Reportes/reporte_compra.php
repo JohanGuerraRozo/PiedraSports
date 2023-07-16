@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../Img/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../../Css/dashboard.css" />
+    <!--Boostrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <title>Registro Venta</title>
+    
     <style>
-        div{
-            margin: 150px auto;
-            width: 600px;
-        }
         table {
             background-color: #ffffff;
             text-align: left;
@@ -28,13 +34,54 @@
             background-color: #dddddd;
         }
 
-        tr:over td{
-            background-color: #12394a;
+        tr:hover td{
+            background-color: #406984;
             color: #ffffff;
         }
     </style>
 </head>
+
 <body>
+    <header class="cabecera">
+        <a href="dashboard.html"><img src="../../Img/logo.png" alt="Logo" /></a>
+        <h1>Reporte Venta</h1>
+    </header>
+    <div class="menu">
+        <nav class="menu-desplegable">
+            <button class="boton-menu">Ventas</button>
+            <div class="Contenido-menu">
+                <a href="../form-venta.php">Ventas</a>
+                <a href="../form-pedido.php">Pedido</a>
+                <!--<a href="#">Catalogo</a>-->
+                <!-- <a href="#">Factura</a> -->
+            </div>
+        </nav>
+        <nav class="menu-desplegable">
+            <button class="boton-menu">Compras</button>
+            <div class="Contenido-menu">
+                <a href="../form-compra.php">Compra</a>
+                <a href="../form-proveedor.php">Proveedor</a>
+            </div>
+        </nav>
+        <nav class="menu-desplegable">
+            <button class="boton-menu">Distribución</button>
+            <div class="Contenido-menu">
+                <a href="../form-distribucion.php">Distribucion</a>
+                <!-- <a href="#">Domicilio</a>
+        <a href="#">Valoracion</a>
+        <a href="#">Seguimiento</a> -->
+            </div>
+        </nav>
+        <nav class="menu-desplegable">
+            <button class="boton-menu">Inventario</button>
+            <div class="Contenido-menu">
+                <a href="../form-producto.php">Producto</a>
+                <a href="reporte_venta.php">Reporte Venta</a>
+                <a href="reporte_compra.php">Reporte Compra</a>
+            </div>
+        </nav>
+    </div>
+    <div class="contenido-principal">
     <?php
         $servername = "localhost";
         $username = "root";
@@ -73,5 +120,10 @@
 
         $conn->close();
     ?>
+    </div>
+    <script src="https://kit.fontawesome.com/19e0e62144.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../Js/venta.js"></script>
 </body>
+
 </html>
