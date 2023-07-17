@@ -12,7 +12,7 @@ class rolModel
 
     public function getRol()
     {
-        $stmt = $this->pdo->prepare("SELECT * FROM rol ORDER BY id_rol asc");
+        $stmt = $this->pdo->prepare("CALL CONSULTA_ROL()");
         $stmt->execute();
 
         return $stmt->fetchAll();
@@ -20,7 +20,7 @@ class rolModel
 
     public function setRol($nomRol)
     {
-        $stmt = $this->pdo->prepare("INSERT INTO rol VALUES(null, :nomRol)");
+        $stmt = $this->pdo->prepare("CALL INSERTAR_ROL(null, :nomRol)");
         $stmt->bindParam(":nomRol", $nomRol);
         $stmt->execute();
     }
@@ -28,7 +28,7 @@ class rolModel
     public function updateRol($idRol, $nomRol)
     {
 
-        $stmt = $this->pdo->prepare("UPDATE rol SET nom_rol = :nomRol WHERE id_rol = :id");
+        $stmt = $this->pdo->prepare("CALL ACTUALIZAR_ROL(:id,:nomRol)");
         $stmt->bindParam(":id", $idRol);
         $stmt->bindParam(":nomRol", $nomRol);
         $stmt->execute();
@@ -36,7 +36,7 @@ class rolModel
 
     public function deleteRol($id)
     {
-        $stmt = $this->pdo->prepare("DELETE FROM rol WHERE ID_ROL = :id");
+        $stmt = $this->pdo->prepare("CALL ELIMINAR_ROL(:id)");
         $stmt->bindParam(":id", $id);
         $stmt->execute();
     }
